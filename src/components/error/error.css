@@ -1,0 +1,21 @@
+.ksa-notfound-h1 {
+    font-size: 288px;
+    text-align: center;
+    color: #FF6060;
+    margin-top: 169px;
+    margin-bottom: 66px;
+}
+
+.ksa-notfound-h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #FF6060;
+    margin-bottom: 182px;
+}
+
+.ksa-notfound-link {
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    color: #FF6060;
+}

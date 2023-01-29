@@ -1,0 +1,16 @@
+.ksa-footer {
+    margin-top: 63px;
+    background-color: black;
+    height: 210px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ksa-footer-text {
+    margin-top: 35px;
+    color: white;
+    font-size: 24px;
+}

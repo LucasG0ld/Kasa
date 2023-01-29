@@ -1,0 +1,53 @@
+.ksa-header {
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+    margin: auto;
+}
+
+.ksa-nav {
+    display: flex;
+    width: 310px;
+}
+
+.ksa-li {
+    list-style-type: none; 
+    margin: auto;
+    display: flex;
+}
+
+.ksa-li-link {
+    font-size: 24px;
+    color: #FF6060;
+    text-decoration: none;
+}
+
+.ksa-li-active {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        padding: 0;
+    }
+    .ksa-header {
+      width: 385px;
+      margin: 20px;
+    }
+    .ksa-header img {
+        width: 35%
+    }
+    .ksa-nav {
+        width: 65%;
+        justify-content: end;
+    }
+    .ksa-nav li:nth-child(1) {
+        margin-right: 20px;
+    }
+    .ksa-li {
+        margin: auto 0;
+    }
+    .ksa-li-link {
+        font-size: 18px;
+    }
+}

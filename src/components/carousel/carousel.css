@@ -1,0 +1,68 @@
+.ksa-lodging-banner img {
+    height: 415px;
+}
+
+.ksa-carousel-container {
+    position: relative;
+    height: 415px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.ksa-lodging-pic {
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    position: absolute;
+    transition: all 0.5s;
+    object-fit: cover;
+}
+
+.ksa-carousel-number {
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.ksa-carousel-btn {
+    position: absolute;
+    color: white;
+    border: none;
+    z-index: 10px;
+    cursor: pointer;
+    font-size: 68px;
+    background-color: inherit;
+}
+
+.ksa-carousel-prev {
+    top: 40%;
+    left: 2%;
+}
+
+.ksa-carousel-next {
+    top: 40%;
+    right: 2%;
+}
+
+@media screen and (max-width: 425px) {
+    .ksa-carousel-container {
+        margin-top: 30px;
+        height: 300px;
+        width: 385px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .ksa-lodging-pic {
+        height: 300px;
+    }
+    .ksa-carousel-number {
+        display: none;
+    }
+}

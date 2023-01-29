@@ -1,0 +1,45 @@
+.ksa-post-container {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+}
+
+.ksa-post-img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.ksa-post-filter {
+    position: absolute;
+    top: 0;
+    background: linear-gradient(185deg,transparent 67%,rgba(0,0,0,.5));
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+}
+
+.ksa-post-title {
+    margin: 0;
+    position: absolute;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 425px) {
+    .ksa-post-container {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    .ksa-post-filter {
+        width: 100%;
+        height: 300px;
+    }
+}

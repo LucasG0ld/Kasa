@@ -1,0 +1,49 @@
+.ksa-accordion-container {
+    margin-bottom: 31px;
+}
+
+.ksa-accordion {
+    color: white;
+    background-color: #FF6060;
+    width: 100%;
+    height: 47px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 0;
+    z-index: 10;
+    position: relative;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ksa-accordion > span {
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+.ksa-accordion-title {
+    padding-left: 18px;
+}
+
+.ksa-accordion-icon {
+    padding-right: 33px;
+}
+
+.ksa-accordion-text {
+    background-color: #F6F6F6;
+    padding: 36px 18px 18px 18px;
+    margin-top: -10px;
+    font-size: 24px;
+    color: #FF6060;
+    line-height: 1.4;
+    margin-bottom: 33px;
+}
+
+@media screen and (max-width: 425px) {
+    .ksa-accordion-text {
+        font-size: 18px;
+    }
+}
