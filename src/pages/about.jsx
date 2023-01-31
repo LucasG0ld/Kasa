@@ -1,7 +1,6 @@
 import Accordion from "../components/accordion/accordion"
 import Banner from "../components/banner/banner"
 import BannerImg from "../components/banner/img/about-banner.png"
-import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 function About() {
     return(

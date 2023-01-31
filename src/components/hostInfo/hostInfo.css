@@ -1,0 +1,91 @@
+h1, h2, h3 {
+    color: #FF6060
+}
+
+h1 {
+    font-size: 36px;
+    margin: 5px;
+    margin-top: 0px;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.ksa-lodging-tag {
+    background-color: #FF6060;
+    color: white;
+    padding: 3px 25px;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.ksa-lodging-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ksa-lodging-host {
+    display: flex
+}
+
+.ksa-lodging-host h3 {
+    width: 100px;
+    text-align: right;
+    height: fit-content;
+    margin: auto;
+}
+
+.ksa-lodging-host img {
+    border-radius: 100px;
+    width: 64px;
+    height: 64px;
+    margin-left: 10px;
+}
+
+.ksa-lodging-star-colored {
+    color: #FF6060!important;
+}
+
+.ksa-lodging-star {
+    font-size: 26px;
+    color: #E3E3E3;
+   
+}
+
+.ksa-raiting-container {
+    margin-top: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.ksa-lodging-accordion-break {
+    white-space: pre;
+}
+
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+    .ksa-lodging-info {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .ksa-lodging-tag {
+        border-radius: 5px;
+        padding: 3px 15px;
+    }
+}

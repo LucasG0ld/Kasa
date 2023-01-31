@@ -16,6 +16,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 function Carousel() {
     /* */
+
     const slides = document.querySelectorAll(".ksa-lodging-pic");
     const domNbImg = document.getElementById("ksa-carousel-current")
     let curNbImg = 1
@@ -28,44 +29,48 @@ function Carousel() {
     let curSlide = 0;
     let maxSlide = slides.length - 1;
 
-    if(nextSlide){
-        nextSlide.addEventListener("click", function () {
-            if (curSlide === maxSlide) {
-                curSlide = 0;
-                curNbImg = 1;
-                domNbImg.innerHTML = curNbImg;
-            } else {
-                curSlide++;
-                curNbImg++;
-                domNbImg.innerHTML = curNbImg;
-            }
-        
-            slides.forEach((slide, indx) => {
-                slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-            });
-            });
+    if (nextSlide) {
+    nextSlide.addEventListener("click", function () {
+        if (curSlide === maxSlide) {
+        curSlide = 0;
+        curNbImg = 1;
+        if (!domNbImg) return;
+        domNbImg.innerHTML = curNbImg;
+        } else {
+        curSlide++;
+        curNbImg++;
+        if (!domNbImg) return;
+        domNbImg.innerHTML = curNbImg;
+        }
+
+        slides.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        });
+    });
     }
-    
+
     const prevSlide = document.querySelector(".ksa-carousel-prev");
 
-    if(prevSlide) {
-        prevSlide.addEventListener("click", function () {
-            if (curSlide === 0) {
-                curSlide = maxSlide;
-                curNbImg = maxSlide+1;
-                domNbImg.innerHTML = curNbImg;
-            } else {
-                curSlide--;
-                curNbImg--;
-                domNbImg.innerHTML = curNbImg;
-            }
-        
-            slides.forEach((slide, indx) => {
-                slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-            });
-            });
+    if (prevSlide) {
+    prevSlide.addEventListener("click", function () {
+        if (curSlide === 0) {
+        curSlide = maxSlide;
+        curNbImg = maxSlide + 1;
+        if (!domNbImg) return;
+        domNbImg.innerHTML = curNbImg;
+        } else {
+        curSlide--;
+        curNbImg--;
+        if (!domNbImg) return;
+        domNbImg.innerHTML = curNbImg;
+        }
+
+        slides.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        });
+    });
     }
-      
+
     /* */
 
     const ratingStars = [1, 2, 3, 4, 5]
@@ -83,8 +88,14 @@ function Carousel() {
     }, [params])
     
     return(
-            <div className='ksa-carousel-container'>
-                {
+        <div>
+            {
+                lodging.pictures != undefined &&
+                lodging.pictures.length === 1 ? 
+                <div className='ksa-image-container'><img className='ksa-lodging-pic' src={ lodging.pictures } alt={ lodging.title }/></div> 
+                : 
+                <div className='ksa-carousel-container'>
+                    {
                     lodging.pictures != undefined &&
                     lodging.pictures.map(picture => [
                         <img className='ksa-lodging-pic' src={ picture } alt={ lodging.title } key={ picture }/>
@@ -98,7 +109,12 @@ function Carousel() {
                     
                 <button className='ksa-carousel-btn ksa-carousel-next'> &gt; </button>
                 <button className='ksa-carousel-btn ksa-carousel-prev'> &lt; </button>
-            </div>
+                </div>
+                
+            }
+            
+                
+        </div>
     )
 }
 

@@ -16,10 +16,10 @@ function App() {
         <Header />
 
         <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/fetch" element={<Fetch />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/lodging/:id" element={<LodgingPage />} />
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/fetch" element={<Fetch />} />
+            <Route exact path="/about" element={<AboutPage />} />
+            <Route exact path="/lodging/:id" element={<LodgingPage />} />
             <Route path="/*" element={<NotFound />}/>
         </Routes>
 
